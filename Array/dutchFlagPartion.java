@@ -18,3 +18,4 @@ public static void dutchFlagPartion (int pivotIndex, List<Color> A){
 }
 
 
+1.https://leetcode.com/problems/find-numbers-with-even-number-of-digits/submissions/
