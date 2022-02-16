@@ -1,27 +1,23 @@
 //am9634
-//Aigerim Madakimova
-class Solution {
-    public void sortColors(int[] nums) {
-        int a = 0;
-        int b = 0;
-        int c = 0;
-        for(int i = 0; i < nums.length; i++){
-            if(nums[i] == 0)
-                a++;
-            else if(nums[i] ==1)
-                b++;
-            else
-                c++;
-        }
-        for(int i = 0; i < nums.length;i++){
-            if(i<a){
-                nums[i] =0;
-            }else if(i < a+b){
-                nums[i] =1;
-            }else
-                nums[i]=2;
-        }
-    }
+import java.util.Arrays;
+public class MyClass {
+   public static int missing(int arr[]){
+       Arrays.sort(arr);
+       //1,2,2,4,4,5
+       //0,1,2,3,4,5
+       int miss = 0;
+       for(int i = 0; i < arr.length; i++){
+           if(arr[i] != i+1){
+               miss = i+1;
+               break;
+           }
+       }
+       return miss;
+       
+   }
+   public static void main(String args[]){
+       int[] arr = {1,2,4,5,2,4};
+       System.out.println("missing n: "+ missing(arr)); //ty tut sdelala owibku
+       
+   }
 }
-
-
