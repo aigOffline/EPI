@@ -5,7 +5,7 @@ public class MyClass {
             for(int j = i + 1 ; j < a.length ; j++)
             {
                 if(a[i] + a[j] == target)
-                    return new int[]{i+1 , j +1};
+                    return new int[]{i, j};
             }
         return new int[]{-1 , -1};
     }
