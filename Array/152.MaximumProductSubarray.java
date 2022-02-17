@@ -11,7 +11,7 @@ public class MyClass {
     {
         max_ending_here = max_ending_here * a[i];
         if (max_ending_here < 0)
-            max_ending_here = 0;
+            max_ending_here = 1;
          
         /* Do not compare for all
            elements. Compare only
