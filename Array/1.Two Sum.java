@@ -1,16 +1,22 @@
-class Solution {
-    public int[] twoSum(int[] nums, int target) {
-        int[] a = new int[] {1,1};
-        int n = nums.length;
-        for(int i= 0; i < n-1; i++){
-            for(int j = i+1; j < n; j++){
-                if(nums[i] + nums[j] == target){
-                    a[0] = i;
-                    a[1] = j;
-                    break;
-                }
+public class MyClass {
+    static int[] targetSum(int []a , int target)
+    {
+        for(int i = 0 ; i < a.length - 1 ; i++)
+            for(int j = i + 1 ; j < a.length ; j++)
+            {
+                if(a[i] + a[j] == target)
+                    return new int[]{i+1 , j +1};
             }
-        }
-        return a;
+        return new int[]{-1 , -1};
     }
+    
+    public static void main(String[] args){
+    int [] a = {1 , 4 , 5 , 11 , 12};
+        int target = 9;
+        for(int i: targetSum(a , target)){
+             System.out.print(i + " ");
+        }
+        
+     }
+
 }
