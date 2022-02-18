@@ -11,7 +11,7 @@ public class MyClass {
         for(int i = 5; i>= 3; i--){
             //we need to shift it
             //since we going from back
-            arr[i+1] = arr[i];
+            arr[i] = arr[i-1];
         }
         arr[3] = 10;
     
