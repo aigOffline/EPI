@@ -1,18 +1,21 @@
-import java.util.Arrays;
-public class MyClass {
-  
-   public static void main(String args[]){
-       int[] input = {  1, 1, 2, 3, 5, 5, 7, 9, 9, 9};
-       int[] count = new int[input.length];
+import java.util.*;
 
-        for(int x : input){
-            count[x] = 1;
-        }
-        for(int i =1; i < count.length; i++){
-            if(count[i] == 0)
-            System.out.println(i);
-        }
-       
-      
+public class MyClass {
+
+    public static int
+    findDisappearedNumbers(int[] nums)
+    {
+        int n=nums.length;
+        int sum=((n+1)*(n+2))/2;
+        for(int i=0;i<n;i++)
+          sum-=nums[i];
+        return sum;
     }
+    public static void main(String[] args)
+    {
+        int[] a = { 1, 2, 4, 5, 6 };
+        System.out.println(findDisappearedNumbers(a));
+    }
+
+ 
 }
