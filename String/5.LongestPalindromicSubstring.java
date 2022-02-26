@@ -16,23 +16,22 @@ public class MyClass {
         high = i + 1;
         low = i - 0;
         while(high < n && str.charAt(high) == str.charAt(i))
-        high++;
+            high++;
         while(low >= 0 && str.charAt(low) == str.charAt(i))
-        low--;
+            low--;
         while(low >= 0 && high < n && str.charAt(high) == str.charAt(low)){
-        low--;
-        high++;
+            low--;
+            high++;
         }
         int length = high - low - 1;
         if(MaxLen < length){
-        MaxLen = length;
-        start = low + 1;
+            MaxLen = length;
+            start = low + 1;
         }
     }
     System.out.println("Substring: ");
     System.out.println(str.substring(start, start+MaxLen));
-    return MaxLen;
-        
+        return MaxLen;
     }
     
     // Driver program to test above function
@@ -45,4 +44,3 @@ public class MyClass {
                            + longestPalSubstr(str1));
     }
 }
-
