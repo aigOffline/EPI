@@ -1,42 +1,62 @@
 import java.util.*;
 public class MyClass {
-   // It prints number of
-  // occurrences of each
-  // element in the array.
-  static void findFrequency(int [] arr,
-                            int n)
-  {
-    Map<Integer, Integer> mp  = new HashMap<Integer, Integer>();
- 
-    // traverse the array
-    for (int i = 0; i < n; i++)
+// Function to find counts of all elements
+// present in arr[0..n-1]. The array elements
+// must be range from 1 to n
+public static void findCounts(int arr[], int n)
+{
+     
+    // Hashmap
+    int hash[] = new int[n];
+    Arrays.fill(hash, 0);
+     
+    // Traverse all array elements
+    int i = 0;
+     
+    while (i < n)
     {
- 
-      // update the frequency
-      if (!mp.containsKey(arr[i]))
-        mp.put(arr[i],0);
- 
-      mp.put(arr[i],mp.get(arr[i])+1);
+         
+        // Update the frequency of array[i]
+        hash[arr[i] - 1]++;
+         
+        // Increase the index
+        i++;
     }
- 
-    // traverse the hashmap
-    for (Map.Entry<Integer, Integer> kvp : mp.entrySet())
+    System.out.println("\nBelow are counts " +
+                       "of all elements");
+    for(i = 0; i < n; i++)
     {
-      System.out.println("Element " + kvp.getKey() +
-                         " occurs " + kvp.getValue() +
-                         " times");
+        System.out.println((i + 1) + " -> " +
+                           hash[i]);
     }
-  }
+}
  
-  // Driver function
-  public static void main (String[] args) {
- 
- 
-    int [] arr = {1, 1, 1, 2,
-                  3, 3, 5, 5,
-                  8, 8, 8, 9,
-                  9, 10};
-    int n = arr.length;
-    findFrequency(arr, n);
-  }
+// Driver code
+public static void main(String []args)
+{
+    int arr[] = { 2, 3, 3, 2, 5 };
+    findCounts(arr, arr.length);
+     
+    int arr1[] = {1};
+    findCounts(arr1, arr1.length);
+     
+    int arr3[] = { 4, 4, 4, 4 };
+    findCounts(arr3, arr3.length);
+     
+    int arr2[] = { 1, 3, 5, 7, 9,
+                   1, 3, 5, 7, 9, 1 };
+    findCounts(arr2, arr2.length);
+     
+    int arr4[] = { 3, 3, 3, 3, 3,
+                   3, 3, 3, 3, 3, 3 };
+    findCounts(arr4, arr4.length);
+     
+    int arr5[] = { 1, 2, 3, 4, 5, 6,
+                   7, 8, 9, 10, 11 };
+    findCounts(arr5, arr5.length);
+     
+    int arr6[] = { 11, 10, 9, 8, 7,
+                   6, 5, 4, 3, 2, 1 };
+    findCounts(arr6, arr6.length);
+}
 }
