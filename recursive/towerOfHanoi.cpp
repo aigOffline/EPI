@@ -24,3 +24,7 @@ int main()
     towerOfHanoi(n, 'A', 'C', 'B'); // A, B and C are names of rods
     return 0;
 }
+// Move disk 3 from rod B to rod C
+// Move disk 1 from rod A to rod B
+// Move disk 2 from rod A to rod C
+// Move disk 1 from rod B to rod C
