@@ -1,12 +1,3 @@
-//am9634
-//Aigerim Madakimova
-
-public class HelloWorld {
-
-	
-	public static void main(String[] argv) {
-		System.out.println("Hello world");
-	}
-}
+https://leetcode.com/problems/remove-nth-node-from-end-of-list/}
 
 
