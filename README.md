@@ -2,4 +2,6 @@
 String ✅ 
 Array ✅ 
 Sort
+Serach
 Hash
+LinkedList
